@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Mood Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Track Your Mood</h1>
+        <div class="mood-selector">
+            <button class="mood-btn" id="happy">😊 Happy</button>
+            <button class="mood-btn" id="sad">😢 Sad</button>
+            <button class="mood-btn" id="excited">😄 Excited</button>
+            <button class="mood-btn" id="calm">😌 Calm</button>
+        </div>
+        <div class="mood-history">
+            <h2>Mood History</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mood Selector */
+.mood-selector {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.mood-btn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: none;
+    background: #f1f1f1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.mood-btn:hover {
+    transform: scale(1.1);
+    background: #ddd;
+}
+
+#happy {
+    background-color: yellow;
+}
+
+#sad {
+    background-color: blue;
+}
+
+#excited {
+    background-color: orange;
+}
+
+#calm {
+    background-color: green;
+}
+
+/* Mood History Section */
+.mood-history {
+    margin-top: 30px;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .mood-selector {
+        flex-direction: column;
+    }
+}
